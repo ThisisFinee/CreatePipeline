@@ -28,6 +28,7 @@ jobs:
         run: |
           pyinstaller --onefile ex-3.py
           echo "OK"
+          ls
       - name: Archive exe
         uses: actions/upload-artifact@v3
         with:
