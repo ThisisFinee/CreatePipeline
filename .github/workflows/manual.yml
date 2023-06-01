@@ -7,7 +7,6 @@ on:
   pull_request:
     branches: [ main ]
   workflow_dispatch:
-    # Inputs the workflow accepts.
 
 
 jobs:
@@ -52,6 +51,5 @@ jobs:
           credentials: ${{ secrets.CREDENTIALS }}
           filename: ex-3.exe
           folderId: ${{ secrets.FOLDERID }}
-
       - name: Send end
         run: echo "Main flow is end!"
