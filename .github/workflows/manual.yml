@@ -32,6 +32,8 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Path to exe
-          path: /home/runner/work/CreatePipeline/CreatePipeline/dist/ex-3.exe
+          path: |
+            ex-3
+            /home/runner/work/CreatePipeline/CreatePipeline/dist/ex-3
       - name: Send end
         run: echo "Main flow is end!"
