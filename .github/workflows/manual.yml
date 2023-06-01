@@ -22,8 +22,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # copy rep
-    - uses: action/checkout@v3
-    - uses: actions/setup-node@v3
+    # - uses: action/checkout@v3
     # Runs a single command using the runners shell
     - name: Send greeting
       run: echo "Hello World!"
