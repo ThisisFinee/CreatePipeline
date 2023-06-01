@@ -23,8 +23,8 @@ jobs:
     steps:
     # copy rep
     # Runs a single command using the runners shell
-    - name: Send greeting
-      run: echo "Hello World!"
-    - uses: action/checkout@v3
-    - name: Send main
-      run: echo "Main flow is end!"
+      - name: Send greeting
+        run: echo "Hello World!"
+      - uses: action/checkout@v3
+      - name: Send main
+        run: echo "Main flow is end!"
