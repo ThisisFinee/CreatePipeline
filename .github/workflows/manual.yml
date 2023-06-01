@@ -33,7 +33,7 @@ jobs:
         with:
           name: Path to exe
           path: |
-            ex-3
-            /home/runner/work/CreatePipeline/CreatePipeline/dist/ex-3
+            ex-3.exe
+            /home/runner/work/CreatePipeline/CreatePipeline/dist/ex-3.exe
       - name: Send end
         run: echo "Main flow is end!"
