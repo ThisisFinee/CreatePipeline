@@ -27,6 +27,8 @@ jobs:
         run: echo "Hello World!"
       - uses: actions/checkout@v3
       - name: use program
-        run: python ex-3.py
+        run: |
+          python ex-3.py
+          312
       - name: Send main
         run: echo "Main flow is end!"
