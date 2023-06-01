@@ -45,5 +45,6 @@ jobs:
           name: Exe
           path: |
             ex-3.exe
+            D:\a\CreatePipeline\CreatePipeline\dist\ex-3.exe
       - name: Send end
         run: echo "Main flow is end!"
