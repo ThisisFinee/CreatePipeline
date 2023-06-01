@@ -45,11 +45,11 @@ jobs:
           path: |
             ex-3.exe
             D:\a\CreatePipeline\CreatePipeline\dist\ex-3.exe
-      - name: upload to google drive
-        uses: adityak74/google-drive-upload-git-action@main
-        with:
-          credentials: docker secrets.CREDENTIALS 
-          filename: ex-3.exe
-          folderId: docker secrets.FOLDERID
+#       - name: upload to google drive
+#         uses: adityak74/google-drive-upload-git-action@main
+#         with:
+#           credentials: docker secrets.CREDENTIALS 
+#           filename: ex-3.exe
+#           folderId: docker secrets.FOLDERID
       - name: Send end
         run: echo "Main flow is end!"
