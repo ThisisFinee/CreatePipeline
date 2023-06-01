@@ -44,6 +44,6 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Exe
-          path: ex-3.exe
+          path: ex-3
       - name: Send end
         run: echo "Main flow is end!"
