@@ -30,7 +30,7 @@ jobs:
         run: pip install pyinstaller
       - name: use program
         run: |
-          pyinstaller --ex-3.py
+          pyinstaller --onefile ex-3.py
           echo "OK"
       - name: Send main
         run: echo "Main flow is end!"
