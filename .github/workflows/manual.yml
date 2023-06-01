@@ -1,9 +1,6 @@
-# This is a basic workflow that is manually triggered
 
 name: Build and test
 
-# Controls when the action will run. Workflow runs when manually triggered using the UI
-# or API.
 on:
   push:
     branches: [ main ]
@@ -12,25 +9,29 @@ on:
   workflow_dispatch:
     # Inputs the workflow accepts.
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+
 jobs:
-  # This workflow contains a single job called "greet"
-  greet:
-    # The type of runner that the job will run on
+ 
+  exe_builder:
+   
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
+  
     steps:
-    # copy rep
-    # Runs a single command using the runners shell
+    
       - name: Send greeting
         run: echo "Hello World!"
       - uses: actions/checkout@v3
       - name: install pyinstaller
         run: pip install pyinstaller
-      - name: use program
+      - name: use pyinstaller
         run: |
           pyinstaller --onefile ex-3.py
           echo "OK"
-      - name: Send main
+      - name: Archive exe
+        uses: actions/upload-artifact@v3
+        with:
+          name: Path to exe
+          path: ex-3.exe
+      - name: Send end
         run: echo "Main flow is end!"
