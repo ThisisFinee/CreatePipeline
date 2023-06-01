@@ -48,8 +48,8 @@ jobs:
       - name: upload to google drive
         uses: adityak74/google-drive-upload-git-action@main
         with:
-          credentials: ${{ secrets.CREDENTIALS }}
+          credentials: docker secrets.CREDENTIALS 
           filename: ex-3.exe
-          folderId: ${{ secrets.FOLDERID }}
+          folderId: docker secrets.FOLDERID
       - name: Send end
         run: echo "Main flow is end!"
