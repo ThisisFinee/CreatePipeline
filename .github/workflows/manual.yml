@@ -29,12 +29,21 @@ jobs:
           pyinstaller --onefile ex-3.py
           echo "OK"
           ls
-      - name: Archive exe
+      - name: Path exe
         uses: actions/upload-artifact@v3
         with:
           name: Path to exe
           path: |
             ex-3.spec
             /home/runner/work/CreatePipeline/CreatePipeline/dist/ex-3.spec
+      - name: go next
+        run: |
+          cd dist
+          ls
+      - name: Exe in
+        uses: actions/upload-artifact@v3
+        with:
+          name: Exe
+          path: ex-3.exe
       - name: Send end
         run: echo "Main flow is end!"
