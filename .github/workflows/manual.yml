@@ -54,7 +54,7 @@ jobs:
       - name: Add artifact
         uses: actions/download-artifact@v3
         with:
-          name: ex-3
+          name: ex-3.zip
       - name: Check
         run: ls
       - name: upload to google drive
