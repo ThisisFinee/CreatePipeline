@@ -58,8 +58,9 @@ jobs:
       - name: upload to google drive
         uses: adityak74/google-drive-upload-git-action@main
         with:
-          credentials: ${{ secrets.credentials }}
+          credentials: ${{ secrets.CREDENTIALS }}
           filename: "Exe"
-          folderId: ${{ secrets.folderId }}
+          folderId: ${{ secrets.FOLDERID }}
+          overwrite: "true"
       - name: Send end
         run: echo "Main flow is end!"
