@@ -59,7 +59,7 @@ jobs:
         uses: adityak74/google-drive-upload-git-action@main
         with:
           credentials: ${{ secrets.CREDENTIALS }}
-          filename: Exe/*
+          filename: Exe/dist/*
           folderId: ${{ secrets.FOLDERID }}
           overwrite: "true"
       - name: Send end
