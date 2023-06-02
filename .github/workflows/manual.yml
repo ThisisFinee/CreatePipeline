@@ -47,7 +47,7 @@ jobs:
             D:\a\CreatePipeline\CreatePipeline\dist\ex-3.exe
             
   Upload_artifacts:
-  
+    needs: exe_builder
     runs-on: ubuntu-latest
     
     steps:
