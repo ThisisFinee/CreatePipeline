@@ -59,7 +59,7 @@ jobs:
         uses: adityak74/google-drive-upload-git-action@main
         with:
           credentials: ${{ secrets.credentials }}
-          filename: "ex-3.exe"
+          filename: "Exe"
           folderId: ${{ secrets.folderId }}
       - name: Send end
         run: echo "Main flow is end!"
