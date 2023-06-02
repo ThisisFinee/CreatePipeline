@@ -7,6 +7,7 @@ on:
   pull_request:
     branches: [ main ]
   workflow_dispatch:
+    
 
 
 jobs:
@@ -62,5 +63,16 @@ jobs:
           filename: Exe/dist/*
           folderId: ${{ secrets.FOLDERID }}
           overwrite: "true"
+  Refactor_code:
+  
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Check code
+        uses: actions/checkout@v3
+      - name: Install styleguide
+        run: pip install wemake-python-styleguide
+      - name: use styleguide
+        run: flake8 ex-3.py
       - name: Send end
         run: echo "Main flow is end!"
