@@ -51,7 +51,5 @@ jobs:
           credentials: ${{ secrets.credentials }}
           filename: "ex-3.exe"
           folderId: ${{ secrets.folderId }}
-          name: "documentation.zip" # optional string
-          overwrite: "true" # optional boolean
       - name: Send end
         run: echo "Main flow is end!"
