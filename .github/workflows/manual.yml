@@ -28,12 +28,12 @@ jobs:
           pyinstaller --onefile ex-3.py
           echo "OK"
           dir
-#       - name: Path exe
-#         uses: actions/upload-artifact@v3
-#         with:
-#           name: Path to exe
-#           path: |
-#             ex-3.spec
+      - name: Path exe
+        uses: actions/upload-artifact@v3
+        with:
+          name: Path to exe
+          path: |
+            ex-3.spec
       - name: go next
         run: |
           cd dist
