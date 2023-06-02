@@ -64,16 +64,16 @@ jobs:
           folderId: ${{ secrets.FOLDERID }}
           overwrite: "true"
   Refactor_code:
-  
+    needs: Upload_artifacts
     runs-on: ubuntu-latest
     
     steps:
       - name: Check code
         uses: actions/checkout@v3
-      - name: Install style
-        run: pip install pycodestyle
-      - name: use style
+      - name: Install styleguide
+        run: pip install wemake-python-styleguide
+      - name: use styleguide
         run: |
-          pycodestyle --first ex-3.py
+          flake8 ex-3.py
       - name: Send end
         run: echo "Main flow is end!"
