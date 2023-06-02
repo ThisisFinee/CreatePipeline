@@ -45,6 +45,18 @@ jobs:
           path: |
             ex-3.exe
             D:\a\CreatePipeline\CreatePipeline\dist\ex-3.exe
+            
+  Upload_artifacts:
+  
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Add artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: ex-3
+      - name: Check
+        run: ls
       - name: upload to google drive
         uses: adityak74/google-drive-upload-git-action@main
         with:
