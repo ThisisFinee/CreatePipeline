@@ -75,5 +75,6 @@ jobs:
       - name: use styleguide
         run: |
           flake8 ex-3.py
+          echo "OK"
       - name: Send end
         run: echo "Main flow is end!"
