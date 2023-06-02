@@ -73,6 +73,7 @@ jobs:
       - name: Install styleguide
         run: pip install wemake-python-styleguide
       - name: use styleguide
-        run: flake8 ex-3.py
+        run: |
+          flake8 ex-3.py
       - name: Send end
         run: echo "Main flow is end!"
