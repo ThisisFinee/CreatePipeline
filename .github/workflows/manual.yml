@@ -73,8 +73,14 @@ jobs:
       - name: Install styleguide
         run: pip install wemake-python-styleguide
       - name: use styleguide
+        continue-on-error: true
         run: |
           flake8 ex-3.py
           echo "OK"
+      - name: Check if 'Lint with flake8' step failed
+        if: steps.flake8.outcome != 'success'
+        run: |
+          echo "flake8 fails"
+          exit 1
       - name: Send end
         run: echo "Main flow is end!"
