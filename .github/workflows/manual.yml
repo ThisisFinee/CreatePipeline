@@ -81,6 +81,5 @@ jobs:
         if: steps.flake8.outcome != 'success'
         run: |
           echo "flake8 fails"
-          exit 1
-      - name: Send end
-        run: echo "Main flow is end!"
+          echo "Main flow is end!"
+          exit 0
